@@ -13,5 +13,12 @@ C# .NET 8.0 framework
 ***
 2. [Задачи массивы](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/zadachi_massivi)
 
-   > 
+   > Задачи с массивами
 ***
+3. [Циклы](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/cikli)
+
+   > Задачи с циклами
+***
+
+
+
