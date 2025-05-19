@@ -1,0 +1,64 @@
+Теоретические вопросы
+
+# Вопрос 1:
+## Что такое метод в C#?
+A) Переменная, хранящая данные
+B) Блок кода, выполняющий определенную задачу
+C) Тип данных
+D) Комментарий в коде
+
+Ответ: B
+
+# Вопрос 2:
+## Какой из следующих вариантов является правильным объявлением метода в C#?
+A) void MyMethod() {}
+B) method MyMethod() {}
+C) function MyMethod() {}
+D) MyMethod() : void {}
+
+Ответ: A
+
+# Вопрос 3:
+## Какой модификатор доступа позволяет методу быть доступным только внутри класса?
+A) public
+B) private
+C) protected
+D) internal
+
+Ответ: B
+
+# Вопрос 4:
+## Какой из следующих методов является статическим?
+A) public void MyMethod() {}
+B) public static void MyMethod() {}
+C) private void MyMethod() {}
+D) protected void MyMethod() {}
+
+Ответ: B
+
+# Вопрос 5:
+## Какой из следующих вариантов позволяет передать аргументы по ссылке в метод?
+A) void MyMethod(ref int x) {}
+B) void MyMethod(int x) {}
+C) void MyMethod(out int x) {}
+D) void MyMethod(int& x) {}
+
+Ответ: A
+
+# Вопрос 6:
+## Что произойдет, если метод не возвращает значение и не имеет модификатора void?
+A) Компилятор выдаст ошибку
+B) Метод вернет значение по умолчанию
+C) Метод будет работать, но не будет ничего делать
+D) Метод будет работать, но вернет null
+
+Ответ: A
+
+# Вопрос 7:
+## Какой из следующих методов является перегруженным?
+A) void MyMethod(int x) {} и void MyMethod(int x, int y) {}
+B) void MyMethod() {} и void MyMethod() {}
+C) void MyMethod(string x) {} и void MyMethod(string x) {}
+D) void MyMethod(int x) {} и void MyMethod(string x) {}
+
+Ответ: A
