@@ -1,0 +1,31 @@
+/*
+### Задача 1: 
+
+Сумма чисел в списке
+Напишите метод, который принимает список чисел и возвращает их сумму.
+*/
+
+using System;
+
+namespace zadaniya
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; // Пример значений
+
+            int sum = 0;
+            foreach (int number in nums)
+            {
+                sum += number;
+            }
+
+            Console.WriteLine("Сумма элементов массива: " + sum);
+
+            Console.ReadKey();
+
+        }
+
+    }
+}
