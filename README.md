@@ -7,18 +7,20 @@ C# .NET 8.0 framework
 ***
 ## Задания
 ***
-1. [Калькулятор](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/calculator)
+### 1. Калькулятор
    
-    > Простой калькулятор
+    > [Простой калькулятор](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/calculator)
 ***
-2. [Задачи массивы](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/zadachi_massivi)
+### 2. Задачи массивы
 
-   > Задачи с массивами
+   > [Задачи с массивами](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/zadachi_massivi)
 ***
-3. [Циклы](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/cikli)
+### 3. Циклы
 
-   > Задачи с циклами
+   > [Задачи с циклами](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/cikli)
 ***
-
+### 4. Методы
+   >[](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/metodi_teoriya)
+   >[]()
 
 
