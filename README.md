@@ -18,6 +18,7 @@ C# .NET 8.0 framework
 ***
 ### 4. Методы
    >[Методы теория](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/metodi_teoriya)  
-   >[Методы практика]()
+   >[Методы практика](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/metodi_practika)
+***
 
 
