@@ -6,4 +6,4 @@
 ***
 ## Задания
 ***
-1. Калькулятор[Skillbox Media](https://skillbox.ru/media/)
+1. Калькулятор[Skillbox Media](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/calculator)
