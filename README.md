@@ -6,4 +6,4 @@
 ***
 ## Задания
 ***
-[Калькулятор](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/calculator)
+1. [Калькулятор](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/calculator)
