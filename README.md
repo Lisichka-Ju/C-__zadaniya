@@ -7,5 +7,5 @@ C# .NET 8.0 framework
 ***
 ## Задания
 ***
-1. [Калькулятор](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/calculator)
+1. [Калькулятор](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/calculator)  
 2. [Задачи массивы](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/zadachi_massivi)
