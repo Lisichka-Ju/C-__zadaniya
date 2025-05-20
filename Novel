@@ -1,0 +1,120 @@
+using System;
+
+namespace SimpleNovel
+{
+    class Program
+    {
+        static void Main()
+        {
+            string name;
+            string atributs_1, atributs_2;
+            string xod_1, xod_2;
+
+
+            Console.WriteLine("Добро пожаловать в интерактивную новеллу!");
+            Console.WriteLine("С этого момента вам предстоит отправиться в полное опасностей приключение!");
+            Console.WriteLine("");
+            Console.WriteLine("Вы просыпаетесь в густом тумане посреди леса. Вокруг вас лишь силуэты деревьев и тишина," +
+                "Вы не помните как тут оказались. Решив осмотреться, находите в кармане старый компас, который вроде как указывает на север.");
+            Console.WriteLine("Когда с осмотром покончено вы вспоминаете некоторые факты о себе...");
+
+            //Шаг 1
+            Console.WriteLine("Ваш класс: ");
+            Console.WriteLine("1. Человек");
+            Console.WriteLine("2. Эльф");
+            Console.WriteLine("3. Гном");
+            name = Console.ReadLine();
+            Console.WriteLine(" ");
+
+            //Шаг 2
+            Console.WriteLine("Ваши особые атрибуты (2)");
+            Console.WriteLine("1. Острое зрение");
+            Console.WriteLine("2. Интуиция");
+            Console.WriteLine("3. Сильные руки");
+            Console.WriteLine("атрибут 1");
+            atributs_1 = Console.ReadLine();
+            Console.WriteLine("атрибут 2");
+            atributs_2 = Console.ReadLine();
+            Console.WriteLine("");
+
+            //Шаг 3
+            Console.WriteLine($"вы вспомнили, что ваша расса это {name}, а ваши атрибуты это {atributs_1} и {atributs_1}");
+            Console.WriteLine("После небольшого отдыха после осмотра вы решаете:");
+            Console.WriteLine("1. Пойти по виднеющейся тропе на север. Туда указзывает компас");
+            Console.WriteLine("2. Пойти на юг. Там слышно звук воды");
+            Console.WriteLine("3. Остаться на месте и ждать пока туман рассеится");
+            xod_1 = Console.ReadLine();
+            Console.WriteLine("");
+
+            //Шаг 4
+            if (xod_1 == "1")
+            {
+                Console.WriteLine("Вы поднялись на гору. С нее открываекся красивый вид на горы и Туманный лес. " +
+                    "Чуть приглядевшись, вы замечаете в далеке деревню и решаете");
+                Console.WriteLine("1. Пойти в горы за сокровищами");
+                Console.WriteLine("2. Пойти в деревню");
+                Console.WriteLine("3. Вернуться обратно в лес");
+                xod_2 = Console.ReadLine();
+                Console.WriteLine("");
+
+                //Шаг 5
+                if (xod_2 == "1")
+                {
+                    Console.WriteLine("Вы нашли сокровища");
+                    Console.WriteLine("Игра окончена! Поздравляю!");
+                    return;
+                }
+                else if (xod_2 == "2")
+                {
+                    Console.WriteLine("Вы пришли в деревню и стали кузнецом");
+                    Console.WriteLine("Игра окончена! Поздравляю!");
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("По пути в лес вы потеряли компас из-зи чего заблудились и умерли");
+                    Console.WriteLine("Игра окончена!");
+                    return;
+                }
+            }
+            else if (xod_1 == "2")
+            {
+                Console.WriteLine("Вы пошле на юг и увидели озеро с чистейшей водой. Вы");
+                Console.WriteLine("1. Подошли к озеру и випили воды");
+                Console.WriteLine("2. Решили искупаться");
+                Console.WriteLine("3. Решили вернуться обратно в лес");
+                xod_2 = Console.ReadLine();
+                Console.WriteLine("");
+
+                //Шаг 5
+                if (xod_2 == "1")
+                {
+                    Console.WriteLine("Вы выпили воды и обустроили лагерь");
+                    Console.WriteLine("Игра окончена! Поздравляю!");
+                    return;
+                }
+                else if (xod_2 == "2")
+                {
+                    Console.WriteLine("Вы утанули из-за двойного дна озера");
+                    Console.WriteLine("Игра окончена!");
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("По пути в лес вы потеряли компас из-зи чего заблудились и умерли");
+                    Console.WriteLine("Игра окончена!");
+                    return;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Со временем туман становится только гуще, и уже не слышно никаких звуков, " +
+                    "компас сбился и теперь не указывает определенного направления");
+                Console.WriteLine("Вы умерли от жажды и голода");
+                Console.WriteLine("Игра окончена!");
+                return;
+            }
+
+        }
+    }
+}
