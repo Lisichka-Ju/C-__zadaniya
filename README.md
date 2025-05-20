@@ -32,4 +32,11 @@ C# .NET 8.0 framework
    > 4. [Выставление тегов
 ](https://github.com/Lisichka-Ju/Zadaniya_for_fish/blob/main/CodeRun/4)
    > 5. [29 задача аналитики](https://github.com/Lisichka-Ju/Zadaniya_for_fish/blob/main/CodeRun/5)
+***
+### 7. Реализация крестиков-ноликов
+   > [Крестики-нолики]()
+
+
+
+
 
