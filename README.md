@@ -25,5 +25,5 @@ C# .NET 8.0 framework
    >[Блок-схемы путь через гит]()  
    >[Блок схемы прямой путь](https://docs.google.com/document/d/1_QdIUxpjL3o0cNw5QKIENuQp3M_JYIas/edit)
 ***
-###6. аоа
+### 6. аоа
 
