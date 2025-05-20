@@ -1,0 +1,22 @@
+***
+### 1. Юля, Никита и задачи
+> Подготовка задач к сезону это долгий и кропотливый процесс. Юля знает, что уже готово A задач.
+> Никита выяснил, что ещё B задач почти готовы и в ближайшее время будут добавлены в сезон. 
+> Помогите Юле и Никите узнать, сколько всего задач планируется в сезоне.
+***
+
+using System;
+using System.Numerics;
+
+public class TaskCounter
+{
+    public static void Main(string[] args)
+    {
+        string[] input = Console.ReadLine().Split(' ');
+
+        BigInteger a = BigInteger.Parse(input[0]);
+        BigInteger b = BigInteger.Parse(input[1]);
+
+        Console.WriteLine(a + b);
+    }
+}
