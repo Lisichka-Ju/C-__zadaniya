@@ -22,8 +22,8 @@ C# .NET 8.0 framework
    >[Методы практика](https://github.com/Lisichka-Ju/C-__zadaniya/blob/main/metodi_practika)
 ***
 ### 5. Блок-схемы
-   >[Блок-схемы путь через гит]()
+   >[Блок-схемы путь через гит]()  
    >[Блок схемы прямой путь](https://docs.google.com/document/d/1_QdIUxpjL3o0cNw5QKIENuQp3M_JYIas/edit)
 ***
-###6.
+###6. аоа
 
