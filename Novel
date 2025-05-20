@@ -1,3 +1,4 @@
+
 using System;
 
 namespace SimpleNovel
@@ -19,29 +20,69 @@ namespace SimpleNovel
             Console.WriteLine("Когда с осмотром покончено вы вспоминаете некоторые факты о себе...");
 
             //Шаг 1
-            Console.WriteLine("Ваш класс: ");
+            Console.WriteLine("Ваша раса: ");
             Console.WriteLine("1. Человек");
             Console.WriteLine("2. Эльф");
             Console.WriteLine("3. Гном");
             name = Console.ReadLine();
             Console.WriteLine(" ");
 
+            if (name == "1")
+            {
+                name = "Человек";
+            }
+            else if (name == "2")
+            {
+                name = "Эльф";
+            }
+            else if (name == "3")
+            {
+                name = "Гном";
+            }
+
             //Шаг 2
-            Console.WriteLine("Ваши особые атрибуты (2)");
+            Console.WriteLine("Ваши особые атрибуты (выберите 2 атрибута)");
             Console.WriteLine("1. Острое зрение");
             Console.WriteLine("2. Интуиция");
             Console.WriteLine("3. Сильные руки");
-            Console.WriteLine("атрибут 1");
+            Console.WriteLine("Выберите атрибут 1");
             atributs_1 = Console.ReadLine();
+
+            if (atributs_1 == "1")
+            {
+                atributs_1 = "Острое зрение";
+            }
+            else if (atributs_1 == "2")
+            {
+                atributs_1 = "Интуиция";
+            }
+            else if (atributs_1 == "3")
+            {
+                atributs_1 = "Сильные руки";
+            }
+
             Console.WriteLine("атрибут 2");
             atributs_2 = Console.ReadLine();
+            if (atributs_2 == "1")
+            {
+                atributs_2 = "Острое зрение";
+            }
+            else if (atributs_2 == "2")
+            {
+                atributs_2 = "Интуиция";
+            }
+            else if (atributs_2 == "3")
+            {
+                atributs_2 = "Сильные руки";
+            }
+
             Console.WriteLine("");
 
             //Шаг 3
-            Console.WriteLine($"вы вспомнили, что ваша расса это {name}, а ваши атрибуты это {atributs_1} и {atributs_1}");
-            Console.WriteLine("После небольшого отдыха после осмотра вы решаете:");
-            Console.WriteLine("1. Пойти по виднеющейся тропе на север. Туда указзывает компас");
-            Console.WriteLine("2. Пойти на юг. Там слышно звук воды");
+            Console.WriteLine($"вы вспомнили, что ваша раса это {name}, а ваши атрибуты это {atributs_1} и {atributs_2}");
+            Console.WriteLine("После небольшого отдыха и осмотра вы решаете:");
+            Console.WriteLine("1. Пойти по заросшей тропе на север. Туда указзывает компас");
+            Console.WriteLine("2. Пойти на юг сквозь лианы. Там слышно звук воды");
             Console.WriteLine("3. Остаться на месте и ждать пока туман рассеится");
             xod_1 = Console.ReadLine();
             Console.WriteLine("");
@@ -70,9 +111,9 @@ namespace SimpleNovel
                     Console.WriteLine("Игра окончена! Поздравляю!");
                     return;
                 }
-                else
+                else if (xod_2 == "3")
                 {
-                    Console.WriteLine("По пути в лес вы потеряли компас из-зи чего заблудились и умерли");
+                    Console.WriteLine("По пути в лес вы потеряли компас из-за чего заблудились и умерли");
                     Console.WriteLine("Игра окончена!");
                     return;
                 }
@@ -95,18 +136,20 @@ namespace SimpleNovel
                 }
                 else if (xod_2 == "2")
                 {
-                    Console.WriteLine("Вы утанули из-за двойного дна озера");
+                    Console.WriteLine("Вы утонули из-за двойного дна озера");
                     Console.WriteLine("Игра окончена!");
                     return;
                 }
-                else
+                else if (xod_2 == "3")
                 {
-                    Console.WriteLine("По пути в лес вы потеряли компас из-зи чего заблудились и умерли");
-                    Console.WriteLine("Игра окончена!");
-                    return;
+                    {
+                        Console.WriteLine("По пути обратно в лес вы запутались в лианах и умерли");
+                        Console.WriteLine("Игра окончена!");
+                        return;
+                    }
                 }
             }
-            else
+            else if (xod_1 == "3")
             {
                 Console.WriteLine("Со временем туман становится только гуще, и уже не слышно никаких звуков, " +
                     "компас сбился и теперь не указывает определенного направления");
@@ -114,7 +157,10 @@ namespace SimpleNovel
                 Console.WriteLine("Игра окончена!");
                 return;
             }
-
+            else
+            {
+                Console.WriteLine("Ошибка не то число... Или не число?");
+            }
         }
     }
 }
