@@ -25,5 +25,11 @@ C# .NET 8.0 framework
    >[Блок-схемы путь через гит]()  
    >[Блок схемы прямой путь](https://docs.google.com/document/d/1_QdIUxpjL3o0cNw5QKIENuQp3M_JYIas/edit)
 ***
-### 6. аоа
+### 6. CodeRun
+   > 1. [Юля, Никита и задачи](https://github.com/Lisichka-Ju/Zadaniya_for_fish/blob/main/CodeRun/1)  
+   > 2. [Треугольник]()
+   > 3. [Больше своих соседей]()
+   > 4. [Выставление тегов
+]()
+   > 5. [29 задача аналитики]()
 
