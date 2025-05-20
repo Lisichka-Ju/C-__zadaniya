@@ -27,9 +27,9 @@ C# .NET 8.0 framework
 ***
 ### 6. CodeRun
    > 1. [Юля, Никита и задачи](https://github.com/Lisichka-Ju/Zadaniya_for_fish/blob/main/CodeRun/1)  
-   > 2. [Треугольник]()
-   > 3. [Больше своих соседей]()
+   > 2. [Треугольник](https://github.com/Lisichka-Ju/Zadaniya_for_fish/blob/main/CodeRun/2)
+   > 3. [Больше своих соседей](https://github.com/Lisichka-Ju/Zadaniya_for_fish/blob/main/CodeRun/3)
    > 4. [Выставление тегов
-]()
-   > 5. [29 задача аналитики]()
+](https://github.com/Lisichka-Ju/Zadaniya_for_fish/blob/main/CodeRun/4)
+   > 5. [29 задача аналитики](https://github.com/Lisichka-Ju/Zadaniya_for_fish/blob/main/CodeRun/5)
 
