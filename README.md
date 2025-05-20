@@ -38,7 +38,8 @@ C# .NET 8.0 framework
 ***
 ### 8. Работа с файловой систетемой и файлом
 > [Аля проводник по типу гит](https://github.com/Lisichka-Ju/Zadaniya_for_fish/blob/main/Provodnik)
-### 8. Интерактивная новелла
+***
+### 9. Интерактивная новелла
    > [Новелла](https://github.com/Lisichka-Ju/Zadaniya_for_fish/blob/main/Novel)
 ***
 
