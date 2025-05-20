@@ -1,0 +1,255 @@
+using System;
+using System.IO;
+
+namespace FileExplorer
+{
+    class Program
+    {
+        static string currentDirectory = Directory.GetCurrentDirectory();
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Простой файловый проводник (C#)");
+            ShowCurrentDirectory();
+
+            while (true)
+            {
+                Console.Write("> ");
+                string command = Console.ReadLine();
+                string[] parts = command.Split(' ');
+
+                try
+                {
+                    switch (parts[0].ToLower())
+                    {
+                        case "dir":
+                            ListDirectory();
+                            break;
+                        case "cd":
+                            if (parts.Length > 1)
+                            {
+                                ChangeDirectory(parts[1]);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Укажите путь.");
+                            }
+                            break;
+                        case "createfile":
+                            if (parts.Length > 1)
+                            {
+                                CreateFile(parts[1]);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Укажите имя файла.");
+                            }
+                            break;
+                        case "createdir":
+                            if (parts.Length > 1)
+                            {
+                                CreateDirectory(parts[1]);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Укажите имя директории.");
+                            }
+                            break;
+                        case "deletefile":
+                            if (parts.Length > 1)
+                            {
+                                DeleteFile(parts[1]);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Укажите имя файла.");
+                            }
+                            break;
+                        case "deletedir":
+                            if (parts.Length > 1)
+                            {
+                                DeleteDirectory(parts[1]);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Укажите имя директории.");
+                            }
+                            break;
+                        case "open":
+                            if (parts.Length > 1)
+                            {
+                                OpenFile(parts[1]);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Укажите имя файла.");
+                            }
+                            break;
+                        case "exit":
+                            return;
+                        case "help":
+                            ShowHelp();
+                            break;
+                        default:
+                            Console.WriteLine("Неизвестная команда. Введите 'help' для списка команд.");
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Ошибка: {ex.Message}");
+                }
+            }
+        }
+
+        static void ShowCurrentDirectory()
+        {
+            Console.WriteLine($"Текущая директория: {currentDirectory}");
+        }
+
+        static void ListDirectory()
+        {
+            Console.WriteLine("Содержимое директории:");
+
+            // Вывод директорий
+            string[] directories = Directory.GetDirectories(currentDirectory);
+            foreach (string dir in directories)
+            {
+                Console.WriteLine($"  <DIR>  {Path.GetFileName(dir)}");
+            }
+
+            // Вывод файлов
+            string[] files = Directory.GetFiles(currentDirectory);
+            foreach (string file in files)
+            {
+                Console.WriteLine($"        {Path.GetFileName(file)}");
+            }
+        }
+
+        static void ChangeDirectory(string path)
+        {
+            string newPath = Path.Combine(currentDirectory, path);
+
+            if (Directory.Exists(newPath))
+            {
+                currentDirectory = newPath;
+                ShowCurrentDirectory();
+            }
+            else
+            {
+                Console.WriteLine("Директория не найдена.");
+            }
+        }
+
+        static void CreateFile(string fileName)
+        {
+            string filePath = Path.Combine(currentDirectory, fileName);
+
+            try
+            {
+                File.Create(filePath).Close(); // .Close() чтобы сразу закрыть поток.
+                Console.WriteLine($"Файл '{fileName}' создан.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при создании файла: {ex.Message}");
+            }
+        }
+
+        static void CreateDirectory(string directoryName)
+        {
+            string directoryPath = Path.Combine(currentDirectory, directoryName);
+
+            try
+            {
+                Directory.CreateDirectory(directoryPath);
+                Console.WriteLine($"Директория '{directoryName}' создана.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при создании директории: {ex.Message}");
+            }
+        }
+
+        static void DeleteFile(string fileName)
+        {
+            string filePath = Path.Combine(currentDirectory, fileName);
+
+            if (File.Exists(filePath))
+            {
+                try
+                {
+                    File.Delete(filePath);
+                    Console.WriteLine($"Файл '{fileName}' удален.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Ошибка при удалении файла: {ex.Message}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Файл не найден.");
+            }
+        }
+
+        static void DeleteDirectory(string directoryName)
+        {
+            string directoryPath = Path.Combine(currentDirectory, directoryName);
+
+            if (Directory.Exists(directoryPath))
+            {
+                try
+                {
+                    Directory.Delete(directoryPath, true); // true - удаление рекурсивно (вместе с содержимым)
+                    Console.WriteLine($"Директория '{directoryName}' удалена.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Ошибка при удалении директории: {ex.Message}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Директория не найдена.");
+            }
+        }
+
+        static void OpenFile(string fileName)
+        {
+            string filePath = Path.Combine(currentDirectory, fileName);
+
+            if (File.Exists(filePath))
+            {
+                try
+                {
+                    // Открываем файл с помощью ассоциированного приложения.
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(filePath) { UseShellExecute = true });
+                    Console.WriteLine($"Открыт файл '{fileName}'.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Ошибка при открытии файла: {ex.Message}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Файл не найден.");
+            }
+        }
+
+        static void ShowHelp()
+        {
+            Console.WriteLine("Доступные команды:");
+            Console.WriteLine("  dir          - Выводит содержимое текущей директории.");
+            Console.WriteLine("  cd <путь>    - Переходит в указанную директорию.");
+            Console.WriteLine("  createfile <имя_файла> - Создает новый файл.");
+            Console.WriteLine("  createdir <имя_директории> - Создает новую директорию.");
+            Console.WriteLine("  deletefile <имя_файла> - Удаляет файл.");
+            Console.WriteLine("  deletedir <имя_директории> - Удаляет директорию.");
+            Console.WriteLine("  open <имя_файла> - Открывает файл.");
+            Console.WriteLine("  exit         - Выход из программы.");
+            Console.WriteLine("  help         - Выводит список команд.");
+        }
+    }
+}
