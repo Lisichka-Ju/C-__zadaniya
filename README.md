@@ -36,7 +36,7 @@ C# .NET 8.0 framework
 ### 7. Реализация крестиков-ноликов
    > [Крестики-нолики](https://github.com/Lisichka-Ju/Zadaniya_for_fish/blob/main/KrestikiNoliki)
 ***
-### 8. Интерактивная новелла на C#
+### 8. Интерактивная новелла
    > [Новелла](https://github.com/Lisichka-Ju/Zadaniya_for_fish/blob/main/Novel)
 ***
 
